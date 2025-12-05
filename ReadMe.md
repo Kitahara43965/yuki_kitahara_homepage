@@ -12,6 +12,8 @@ index.html（ホーム）<br>
 accomplishments/accomplishments.html（業績）<br>
 background/background.html（経歴）<br>
 がございます。<br>
+index.htmlより他のページをご確認いただけます<br>
+
 
 
 

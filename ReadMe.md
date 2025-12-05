@@ -9,5 +9,11 @@ background/background.html（経歴）<br>
 <br>
 より、ホームページの中身を確認いたせます。<br>
 お手数おかけしてしまい、大変恐縮ですがどうぞよろしくお願いいたします。<br>
+<br>
+ローカルリポジトリで<br>
+$git clone git@github.com:Kitahara43965/yuki_kitahara_homepage.git<br>
+とすればローカルディレクトリにクローンできます。
+
+
 
 

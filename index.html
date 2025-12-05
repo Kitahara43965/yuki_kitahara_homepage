@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<title>北原博幸のホームページ</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description"  content="メタデスクリプション" />
+		
+		<style>
+			
+			.collapsible_a{
+				text-indent:0px;
+				background-color:#c5cfe8;
+				color:#000000;
+				cursor: pointer;
+				width: 100%;
+				border: none;
+				text-align: left;
+				outline: none;
+				font-size: 30px;
+				padding: 0.5em;
+			}
+			.collapsible_a:hover{
+				color:#ffffff;
+				background-color:#fcbdf9;
+			}
+			.collapsible_a:after{
+				content:"\23f5"; /* Unicode character for sign (|>) */
+				float:left;
+				font-weight:bold;
+				margin-left:5px;
+			}
+			
+			.collapsible_descendant{
+				cursor: pointer;
+				width: 100%;
+				border: none;
+				text-align: left;
+				outline: none;
+				font-size: 30px;
+				padding: 0em;
+			}
+			.collapsible_descendant:after {
+				background-color:#ffffff;
+				color:#ffffff;
+				font-weight: bold;
+				margin-left: 5px;
+			}
+			.collapsible_descendant:nth-child(2n+1){
+				background-color:#fef7f0;
+				color:#000000;
+			}
+			.collapsible_descendant:nth-child(2n){
+				background-color:#e2e2e2;
+				color:#000000;
+			}
+			
+			.active_a:after {
+				content:'\23f7'; /* Unicode character for sign "▽" */
+				float:left;
+			}
+			
+			.active_a:hover{
+				background-color:#fcbdf9;
+				color:#ffffff;
+			}
+			
+			.content {
+				width:100%;
+				max-height: 0;
+				overflow: hidden;
+				transition: max-height 0.2s ease-out;
+				padding: 0px;
+				margin: 0px;
+				font-size:30px;
+			}
+			
+			.styled {
+				border: 0;
+				line-height: 2.5;
+				padding: 0.0em 0.5em;
+				text-align: center;
+				color: #fff;
+				text-shadow: 1px 1px 1px #000;
+				border-radius: 0px;
+				background-color: rgba(64,224,208,1);
+				background-image: linear-gradient(to top left,rgba(0, 0, 0, .2),rgba(0, 0, 0, .2)	30%,rgba(0, 0, 0, 0));
+				box-shadow:inset 2px 2px 3px rgba(255, 255, 255, .6),
+				inset -2px -2px 3px rgba(0, 0, 0, .6);
+				font-size: 30px;
+			}
+			
+			.styled:hover {
+				background-color: rgba(72,209,204,1);
+			}
+			
+			.styled:active {
+				box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),inset 2px 2px 3px rgba(0, 0, 0, .6);
+			}
+			
+			.button_box{
+				display: flex; 
+				justify-content:right;
+				flex-wrap: wrap;
+			}
+			
+			.logo_image{
+				vertical-align:bottom;
+				width:100%;
+			}
+			
+		</style>
+		
+		<meta name="google-site-verification" content="faipuxSc44vxiJJ_ephl3kiKdGaEnAqcVryWCjhGod0" />
+		
+	</head>
+	
+	<body bgcolor=#e6e6fa>
+		<div class="button_box">
+			<button class="favorite styled" onclick="location.href=''" value="遷移">ホーム</button>
+			<button class="favorite styled" onclick="location.href='accomplishments/accomplishments.html'" value="遷移">研究実績</button>
+			<button class="favorite styled" onclick="location.href='background/background.html'" value="遷移">経歴</button>
+		</div>
+		<div style="text-align:center;"> 
+			<img src="sakura.jpg" alt="写真" width="1930" height="600" class="logo_image">
+		</div>
+		<button class="collapsible_a">お知らせ</button>
+		<div class="content">
+			<button class="collapsible_descendant">
+				ホームページ更新しました。（令和4年5月30日）
+			</button>
+		</div>
+		
+		<script>
+			var coll = document.getElementsByClassName("collapsible_title");
+			var i=0;
+			for (i = 0; i < coll.length; i++) {
+				coll[i].addEventListener("click", function(){
+					this.classList.toggle("active");
+					var content = this.nextElementSibling;
+					if(content.style.maxHeight){
+						content.style.maxHeight = null;
+					} else {
+						content.style.maxHeight = content.scrollHeight + "px";
+					}
+				});
+			}
+		</script>
+	</body>
+	
+	<script>
+		window.resizeTo(500,100);
+		var collapsible_a_elements = document.getElementsByClassName("collapsible_a");
+		var	collapsible_a_parent_node_kind=0;
+		var i=0;
+		var	collapsible_a_element_number=0;
+		let	title_property=null;
+		let	onclick_collapsible_a_element_kind=null;
+		
+		if(collapsible_a_elements.length>=1){
+			for(i=1;i<=collapsible_a_elements.length;i=i+1){
+				collapsible_a_elements[i-1].addEventListener("click", function(){
+					this.classList.toggle("active_a");
+					if(this.nextElementSibling.style.maxHeight){
+						this.nextElementSibling.style.maxHeight=null;
+					}else {
+						this.nextElementSibling.style.maxHeight=this.nextElementSibling.scrollHeight + "px";
+					}
+				});
+				collapsible_a_elements[i-1].onclick=(function(a){
+					//return function(){console.log(a,",",title_property);};
+				})(i);
+			}
+		}
+		
+	</script>
+		
+</html>	

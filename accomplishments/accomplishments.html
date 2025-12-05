@@ -1,0 +1,778 @@
+<!--https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_collapsible_symbol-->
+<!--relation between all the title names and htmls were checked-->
+<!--theses labels were checked-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>北原博幸のホームページ 研究実績</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description"  content="メタデスクリプション" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+			.collapsible_title{
+				background-color:#c5cfe8;
+				color: #000000;
+				cursor: pointer;
+				width: 100%;
+				border: none;
+				text-align: left;
+				outline: none;
+				font-size: 30px;
+				padding: 0.5em;
+			}
+			.collapsible_title:after {
+				color:#555555;
+				font-weight: bold;
+				margin-left: 5px;
+			}
+			
+			.collapsible_a{
+				text-indent:0px;
+				background-color:#dbf6f5;
+				color:#000000;
+				cursor: pointer;
+				width: 100%;
+				border: none;
+				text-align: left;
+				outline: none;
+				font-size: 30px;
+				padding: 0.0em;
+			}
+			.collapsible_a:hover{
+				color:#ffffff;
+				background-color:#fcbdf9;
+			}
+			.collapsible_a:after{
+				content:"\23f5"; /* Unicode character for sign (|>) */
+				float:left;
+				font-weight:bold;
+				margin-left:5px;
+			}
+			
+			.collapsible_descendant{
+				cursor: pointer;
+				width: 100%;
+				border: none;
+				text-align: left;
+				outline: none;
+				font-size: 30px;
+				padding: 0em;
+			}
+			.collapsible_descendant:after {
+				background-color:#ffffff;
+				color:#ffffff;
+				font-weight: bold;
+				margin-left: 5px;
+			}
+			.collapsible_descendant:nth-child(2n+1){
+				background-color:#fef7f0;
+				color:#000000;
+			}
+			.collapsible_descendant:nth-child(2n){
+				background-color:#e2e2e2;
+				color:#000000;
+			}
+			.collapsible_descendant:hover{
+				background-color:#fcbdf9;
+				color:#ffffff;
+			}
+			
+			.active_a:after {
+				content:'\23f7'; /* Unicode character for sign "▽" */
+			}
+			
+			.active_a:hover{
+				background-color:#fcbdf9;
+				color:#ffffff;
+			}
+
+			.inner_container{
+				width:100%;
+				max-height: 0;
+				overflow: hidden;
+				transition: max-height 0.2s ease-out;
+				padding: 0px;
+				margin: 0px;
+			}
+			
+			.styled {
+				border: 0;
+				line-height: 2.5;
+				padding: 0.0em 0.5em;
+				text-align: center;
+				color: #fff;
+				text-shadow: 1px 1px 1px #000;
+				border-radius: 0px;
+				background-color: rgba(64,224,208,1);
+				background-image: linear-gradient(to top left,rgba(0, 0, 0, .2),rgba(0, 0, 0, .2)	30%,rgba(0, 0, 0, 0));
+				box-shadow:inset 2px 2px 3px rgba(255, 255, 255, .6),
+				inset -2px -2px 3px rgba(0, 0, 0, .6);
+				font-size: 30px;
+			}
+			
+			.styled:hover {
+				background-color: rgba(72,209,204,1);
+			}
+			
+			.styled:active {
+				box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),inset 2px 2px 3px rgba(0, 0, 0, .6);
+			}
+			
+			.button_box{
+				display: flex; 
+				justify-content:right;
+				flex-wrap: wrap;
+			}
+		</style>
+	</head>
+	<body bgcolor=#e6e6fa>
+		<div class="button_box">
+			<button class="favorite styled" onclick="location.href='../index.html'" value="遷移">ホーム</button>
+			<button class="favorite styled" onclick="location.href=''" value="遷移">研究実績</button>
+			<button class="favorite styled" onclick="location.href='../background/background.html'" value="遷移">経歴</button>
+		</div>
+		<button class="collapsible_title">著書</button>
+		<button class="collapsible_a">賢いエアコン活用術 : 環境にも家計にもやさしい(はなしシリーズ)</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://cir.nii.ac.jp/crid/1130282269674445952'";
+			button class="collapsible_descendant">
+				賢いエアコン活用術 : 環境にも家計にもやさしい(はなしシリーズ) , 技報堂出版 2003
+			</button>
+		</div>
+		<button class="collapsible_title">研究業績</button>
+		<button class="collapsible_a">Hydrodynamic Behaviour of Conical Fermenters in Brewing.</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/kakoronbunshu1975/18/6/18_6_875/_article/-char/ja/'" class="collapsible_descendant">
+				Hydrodynamic Behaviour of Conical Fermenters in Brewing., 化学工学論文集 18 (6), 875-880, 1992, DOI
+			</button>
+		</div>
+		<button class="collapsible_a">20-120KにおけるYBCOディスクの自己磁場分布の温度依存性</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://cir.nii.ac.jp/crid/1570291225726430848'" class="collapsible_descendant">
+				20-120KにおけるYBCOディスクの自己磁場分布の温度依存性, 低温工学・超電導学会講演概要集 = Meetings of Cryogenics and Superconductivity 56 100-, 1997-05-14
+			</button>
+		</div>
+		<button class="collapsible_a">温度サイクル条件下でのYBCOディスクの磁化特性</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://cir.nii.ac.jp/crid/1570572700703021312'" class="collapsible_descendant">
+				温度サイクル条件下でのYBCOディスクの磁化特性, 低温工学・超電導学会講演概要集 = Meetings of Cryogenics and Superconductivity 57 102-, 1997-11-18
+			</button>
+		</div>
+		<button class="collapsible_a">高齢者の暖房方法と乾燥感との関連について</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://www.aij.or.jp/paper/detail.html?productId=241185'" class="collapsible_descendant">
+				高齢者の暖房方法と乾燥感との関連について, 学術講演梗概集. D-2, 環境工学II, 熱, 湿気, 温熱感, 自然エネルギー, 
+				気流・換気・排煙, 数値流体, 空気清浄, 暖冷房・空調, 熱源設備, 設備応用 (2000) 899-900, 2000-07-31, 日本建築学会
+			</button>
+		</div>
+		<button class="collapsible_a">室温変化時の高齢者温熱反応の特徴</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://dl.ndl.go.jp/info:ndljp/pid/11078644'" class="collapsible_descendant">
+				室温変化時の高齢者温熱反応の特徴, 人間-生活環境系シンポジウム報告集 24 105-108, 2000, NDLデジタルコレクション
+			</button>
+		</div>
+		<button class="collapsible_a">室温変動に伴う高齢者の生理心理反応</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/jje1965/36/Supplement/36_Supplement_344/_article/-char/ja/'" class="collapsible_descendant">
+				室温変動に伴う高齢者の生理心理反応, 人間工学 36 (Supplement), 344-345, 2000, DOI
+			</button>
+		</div>
+		<button class="collapsible_a">温熱環境の経時変動に伴う高齢者の生理心理反応--在宅介護用シャワー浴装置の開発に向けて</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://cir.nii.ac.jp/crid/1571698985876618624'" class="collapsible_descendant">
+				温熱環境の経時変動に伴う高齢者の生理心理反応--在宅介護用シャワー浴装置の開発に向けて, 山口県産業技術センター研究報告 (13) 27-30, 2001-02
+			</button>
+		</div>
+		<button class="collapsible_a">高齢者の住まいにおける暖房方法と健康との関連に関する研究</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/jusokennen/27/0/27_9916/_article/-char/ja/'" class="collapsible_descendant">
+				高齢者の住まいにおける暖房方法と健康との関連に関する研究, 住宅総合研究財団研究年報 27 (0), 231-242, 2001, DOI
+			</button>
+		</div>
+		<button class="collapsible_a">高効率ケミカル除湿空調システムの基礎特性の検討</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/scej/2003f/0/2003f_0_341/_article/-char/ja/'" class="collapsible_descendant">
+				高効率ケミカル除湿空調システムの基礎特性の検討, 化学工学会　研究発表講演要旨集 2003f (0), 341-341, 2003, DOI
+			</button>
+		</div>
+		<button class="collapsible_a">上海2003中日建築環境設備フォーラム参加報告</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://cir.nii.ac.jp/crid/1572543024981498240'" class="collapsible_descendant">
+				上海2003中日建築環境設備フォーラム参加報告, 空気調和・衛生工学 78 (4), 285-289, 2004-04-05, 記事種別: 会議・学会報告・シンポジウム
+			</button>
+		</div>
+		<button class="collapsible_a">ケミカル調湿システムにおける除湿特性の基礎的検討</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/jsmecs/2004.42/0/2004.42_285/_article/-char/ja/'" class="collapsible_descendant">
+				ケミカル調湿システムにおける除湿特性の基礎的検討(熱工学IV), 中国四国支部総会・講演会　講演論文集 2004.42 (0), 285-286, 2004, DOI
+			</button>
+		</div>
+		<button class="collapsible_a">壁材の吸放湿特性と深夜電力利用による電力シフトおよび空調コスト削減の研究</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/jietaikaiyoushi/14/0/14_316/_article/-char/ja/'" class="collapsible_descendant">
+				壁材の吸放湿特性と深夜電力利用による電力シフトおよび空調コスト削減の研究((5)家庭における省エネ2,Session 6 省エネルギー), 
+				日本エネルギー学会大会講演要旨集 14 (0), 316-317, 2005, DOI
+			</button>
+		</div>
+		<button class="collapsible_a">中国における住宅の居住環境とエネルギー消費</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://www.aij.or.jp/paper/detail.html?productId=91584'" class="collapsible_descendant">
+				中国における住宅の居住環境とエネルギー消費 : 中国の住宅におけるエネルギー消費と居住環境問題特別研究委員会(今伝えたいトピックス), 
+				建築雑誌 (1539) 40-41, 2005-11-20, 日本建築学会
+			</button>
+		</div>
+		<button class="collapsible_a">ケミカル調湿システムに用いる水和塩スラリーの吸湿特性に関する基礎的検討</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/jsmecs/2005.43/0/2005.43_213/_article/-char/ja/'" class="collapsible_descendant">
+				ケミカル調湿システムに用いる水和塩スラリーの吸湿特性に関する基礎的検討(熱工学II), 中国四国支部総会・講演会　講演論文集 2005.43 (0), 213-214, 2005, DOI
+			</button>
+		</div>
+		<button class="collapsible_a">水和塩スラリーを用いたケミカル調湿システムの反応特性に関する基礎的検討</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/scej/2005f/0/2005f_0_432/_article/-char/ja/'" class="collapsible_descendant">
+				水和塩スラリーを用いたケミカル調湿システムの反応特性に関する基礎的検討, 化学工学会　研究発表講演要旨集 2005f (0), 432-432, 2005, DOI
+			</button>
+		</div>
+		<button class="collapsible_a">骨太のエネルギーロードマップ</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://cir.nii.ac.jp/crid/1571980075416775552'" class="collapsible_descendant">
+				(No Title), 骨太のエネルギーロードマップ 2005
+			</button>
+			<button type=“button” onclick="location.href='https://cir.nii.ac.jp/crid/1572824500871996160'" class="collapsible_descendant">
+				(No Title), 骨太のエネルギーロードマップ 114-201, 2005
+			</button>
+			<button type=“button” onclick="location.href='https://cir.nii.ac.jp/crid/1573668925464976000'" class="collapsible_descendant">
+				(No Title), 骨太のエネルギーロードマップ 2005
+			</button>
+		</div>
+		<button class="collapsible_a">水和塩スラリーを用いた新型高効率空調システム</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://cir.nii.ac.jp/crid/1574232260499222016'" class="collapsible_descendant">
+				水和塩スラリーを用いた新型高効率空調システム (特集 実用化を展望したライセンス技術), ケミカルエンジニヤリング 51 (10), 776-780, 2006-10
+			</button>
+		</div>
+		<button class="collapsible_a">水和塩スラリーを用いた調湿プロセスのシステム検討</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/scej/2006f/0/2006f_0_715/_article/-char/ja/'" class="collapsible_descendant">
+				水和塩スラリーを用いた調湿プロセスのシステム検討, 化学工学会　研究発表講演要旨集 2006f (0), 715-715, 2006, DOI
+			</button>
+		</div>
+		<button class="collapsible_a">ケミカル調湿システムにおける反応速度の基礎的検討</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/jsmecs/2006.44/0/2006.44_249/_article/-char/ja/'" class="collapsible_descendant">
+				ケミカル調湿システムにおける反応速度の基礎的検討(熱工学IV), 中国四国支部総会・講演会　講演論文集 2006.44 (0), 249-250, 2006, DOI
+			</button>
+		</div>
+		<button class="collapsible_a">高松塚古墳石室解体時の空調方法の検討</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://tobunken.repo.nii.ac.jp/?action=pages_view_main&active_action=repository_view_main_item_detail&item_id=3687&item_no=1&page_id=13&block_id=21'" class="collapsible_descendant">
+				〔報文〕高松塚古墳石室解体時の空調方法の検討, 保存科学 = Science for conservation 46 1-12, 2007-03-31, DOI, 機関リポジトリ
+			</button>
+		</div>
+		<button class="collapsible_a">古墳壁画の保存に関する研究</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://www.aij.or.jp/paper/detail.html?productId=282244'" class="collapsible_descendant">
+				古墳壁画の保存に関する研究 : 空調制御による石室解体時の劣化防止の検討(環境), 日本建築学会近畿支部研究報告集. 環境系 (47) 157-160, 2007-05-22, 日本建築学会
+			</button>
+			<button type=“button” onclick="location.href='https://www.aij.or.jp/paper/detail.html?productId=244843'" class="collapsible_descendant">
+				古墳壁画の保存に関する研究 : その1) 石室解体時における空調制御の実大実験(水分による劣化と保存,環境工学II), 学術講演梗概集. D-2, 
+				環境工学II, 熱, 湿気, 温熱感, 自然エネルギー, 気流・換気・排煙, 数値流体, 空気清浄, 暖冷房・空調, 熱源設備, 設備応用 (2007) 341-342, 2007-07-31, 日本建築学会
+			</button>
+			<button type=“button” onclick="location.href='https://www.aij.or.jp/paper/detail.html?productId=244844'" class="collapsible_descendant">
+				古墳壁画の保存に関する研究 : その2) 石室解体時における石室周囲気流性状の解析(水分による劣化と保存,環境工学II), 学術講演梗概集. D-2, 
+				環境工学II, 熱, 湿気, 温熱感, 自然エネルギー, 気流・換気・排煙, 数値流体, 空気清浄, 暖冷房・空調, 熱源設備, 設備応用 (2007) 343-344, 2007-07-31, 日本建築学会
+			</button>
+			<button type=“button” onclick="location.href='https://www.aij.or.jp/paper/detail.html?productId=245515'" class="collapsible_descendant">
+				古墳壁画の保存に関する研究 : その3) 石室解体時の温湿度環境制御(水分による劣化と保存,環境工学II), 学術講演梗概集. D-2, 
+				環境工学II, 熱, 湿気, 温熱感, 自然エネルギー, 気流・換気・排煙, 数値流体, 空気清浄, 暖冷房・空調, 熱源設備, 設備応用 (2008) 269-270, 2008-07-20, 日本建築学会
+			</button>
+			<button type=“button” onclick="location.href='https://www.aij.or.jp/paper/detail.html?productId=245516'" class="collapsible_descendant">
+				古墳壁画の保存に関する研究 : その4) 石室解体時における墳丘部の形状変化が石室の熱水分性状に与える影響(水分による劣化と保存,環境工学II), 学術講演梗概集. D-2, 
+				環境工学II, 熱, 湿気, 温熱感, 自然エネルギー, 気流・換気・排煙, 数値流体, 空気清浄, 暖冷房・空調, 熱源設備, 設備応用 (2008) 271-272, 2008-07-20, 日本建築学会
+			</button>
+		</div>
+		<button class="collapsible_a">炭酸ナトリウム10水塩を用いたケミカル調湿システムにおける物質移動特性</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/jsmeted/2007/0/2007_403/_article/-char/ja/'" class="collapsible_descendant">
+				炭酸ナトリウム10水塩を用いたケミカル調湿システムにおける物質移動特性(空調), 熱工学コンファレンス講演論文集 2007 (0), 403-404, 2007, DOI
+			</button>
+		</div>
+		<button class="collapsible_a">ケミカル調湿システムにおける吸水反応速度の基礎的検討</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/jsmecs/2007.45/0/2007.45_213/_article/-char/ja/'" class="collapsible_descendant">
+				ケミカル調湿システムにおける吸水反応速度の基礎的検討(熱工学I), 中国四国支部総会・講演会　講演論文集 2007.45 (0), 213-214, 2007, DOI
+			</button>
+		</div>
+		<button class="collapsible_a">湿式デシカント回路を搭載したエアコンの除加湿性能の評価</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/shasetaikai/2008.1/0/2008.1_205/_article/-char/ja/'" class="collapsible_descendant">
+				湿式デシカント回路を搭載したエアコンの除加湿性能の評価 : (第1報) 理論的検討, 空気調和・衛生工学会大会　学術講演論文集 2008.1 (0), 205-208, 2008, DOI
+			</button>
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/shasetaikai/2008.1/0/2008.1_209/_article/-char/ja/'" class="collapsible_descendant">
+				湿式デシカント回路を搭載したエアコンの除加湿性能の評価 : (第2報) 実験による検討, 空気調和・衛生工学会大会　学術講演論文集 2008.1 (0), 209-212, 2008, DOI
+			</button>
+		</div>
+		<button class="collapsible_a">高松塚古墳石室解体時の壁画保存のための温湿度環境の制御</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://tobunken.repo.nii.ac.jp/?action=pages_view_main&active_action=repository_view_main_item_detail&item_id=3720&item_no=1&page_id=13&block_id=21'" class="collapsible_descendant">
+				〔報文〕高松塚古墳石室解体時の壁画保存のための温湿度環境の制御, 保存科学 = Science for conservation 47 1-10, 2008-03-31, DOI, 機関リポジトリ
+			</button>
+		</div>
+		<button class="collapsible_a">古墳壁画保存に関する研究</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://www.aij.or.jp/paper/detail.html?productId=282353'" class="collapsible_descendant">
+				古墳壁画保存に関する研究 : 石室解体時の墳丘部の形状変化が石室の熱水分性状に与える影響(環境), 日本建築学会近畿支部研究報告集. 環境系 (48) 217-220, 2008-05-23, 日本建築学会
+			</button>
+		</div>
+		<button class="collapsible_a">空調・人間工学の融合技術の一例</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/jietaikaiyoushi/17/0/17_312/_article/-char/ja/'" class="collapsible_descendant">
+				空調・人間工学の融合技術の一例 : 温熱快適性向上に向けた省エネ調湿システムの取り組み((1)学融合,Session 8 エネルギー評価・経済), 
+				日本エネルギー学会大会講演要旨集 17 (0), 312-313, 2008, DOI
+			</button>
+		</div>
+		<button class="collapsible_a">調湿技術の進展</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://cir.nii.ac.jp/crid/1571980075647172864'" class="collapsible_descendant">
+				調湿技術の進展, 空気調和・衛生工学 82 (8), 635-640, 2008-08-05
+			</button>
+		</div>
+		<button class="collapsible_a">ケミカル調湿システムに用いるロータリーキルン反応器の吸湿特性に関する実験的検討</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/jsmecs/2008.46/0/2008.46_231/_article/-char/ja/'" class="collapsible_descendant">
+				ケミカル調湿システムに用いるロータリーキルン反応器の吸湿特性に関する実験的検討(熱工学III), 中国四国支部総会・講演会　講演論文集 2008.46 (0), 231-232, 2008, DOI
+			</button>
+		</div>
+		<button class="collapsible_a">ケミカル調湿システムにおける物質移動装置の検討</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/nhts/2008/0/2008_0_162/_article/-char/ja/'" class="collapsible_descendant">
+				ケミカル調湿システムにおける物質移動装置の検討, 日本伝熱シンポジウム講演論文集 2008 (0), 162-162, 2008, DOI
+			</button>
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/jsmekyushu/2008/0/2008_243/_article/-char/ja/'" class="collapsible_descendant">
+				ケミカル調湿システムにおける物質移動装置の検討(OS4 相変化を伴う熱移動現象), 日本機械学会九州支部講演論文集 2008 (0), 243-244, 2008, DOI
+			</button>
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/jsmecs/2009.47/0/2009.47_113/_article/-char/ja/'" class="collapsible_descendant">
+				ケミカル調湿システムにおける物質移動装置の検討(熱工学II), 中国四国支部総会・講演会　講演論文集 2009.47 (0), 113-114, 2009, DOI
+			</button>
+		</div>
+		<button class="collapsible_a">アジア地域における建築環境とSustainable Development</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://www.aij.or.jp/paper/detail.html?productId=94523'" class="collapsible_descendant">
+				アジア地域における建築環境とSustainable Development(研究協議会,地球環境部門,2008年度日本建築学会大会(中国)), 建築雑誌
+			</button>
+		</div>
+		<button class="collapsible_a">湿式デシカント回路搭載エアコンの除加湿性能の評価</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://www.aij.or.jp/paper/detail.html?productId=246698'" class="collapsible_descendant">
+				湿式デシカント回路搭載エアコンの除加湿性能の評価(エアコン,環境工学II), 学術講演梗概集. D-2, 環境工学II, 
+				熱, 湿気, 温熱感, 自然エネルギー, 気流・換気・排煙, 数値流体, 空気清浄, 暖冷房・空調, 熱源設備, 設備応用 (2009) 1291-1292, 2009-07-20, 日本建築学会
+			</button>
+		</div>
+		<button class="collapsible_a">家庭用エアコンにデシカント回路搭載の除加湿性能評価</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/shasekinki/2009/0/2009_123/_article/-char/ja/'" class="collapsible_descendant">
+				家庭用エアコンにデシカント回路搭載の除加湿性能評価(学術研究), 空気調和・衛生工学会大会　近畿支部発表会論文集 2009 (0), 123-126, 2010, DOI
+			</button>
+		</div>
+		<button class="collapsible_a">ケミカル調湿システムに用いるロータリーキルン反応器の物質移動特性</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/nhts/2009/0/2009_0_114/_article/-char/ja/'" class="collapsible_descendant">
+				ケミカル調湿システムに用いるロータリーキルン反応器の物質移動特性, 日本伝熱シンポジウム講演論文集 2009 (0), 114-114, 2009, DOI
+			</button>
+		</div>
+		<button class="collapsible_a">住宅用エアコンの冷房時熱源特性モデルの開発</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/shasetaikai/2010.1/0/2010.1_85/_article/-char/ja/'" class="collapsible_descendant">
+				住宅用エアコンの冷房時熱源特性モデルの開発 : (第1報)冷房時熱源特性のモデル化, 空気調和・衛生工学会大会　学術講演論文集 2010.1 (0), 85-88, 2010, DOI
+			</button>
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/shasetaikai/2010.1/0/2010.1_89/_article/-char/ja/'" class="collapsible_descendant">
+				住宅用エアコンの冷房時熱源特性モデルの開発 : (第2報)動作特性把握実験とモデルの精度検証, 空気調和・衛生工学会大会　学術講演論文集 2010.1 (0), 89-92, 2010, DOI
+			</button>
+		</div>
+		<button class="collapsible_a">家庭用エアコンの冷房時熱源特性モデルの開発</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://www.aij.or.jp/paper/detail.html?productId=247435'" class="collapsible_descendant">
+				家庭用エアコンの冷房時熱源特性モデルの開発 : 第1報 : 冷房時熱源特性のモデル化(熱源シミュレーション,環境工学II), 学術講演梗概集. D-2, 
+				環境工学II, 熱, 湿気, 温熱感, 自然エネルギー, 気流・換気・排煙, 数値流体, 空気清浄, 暖冷房・空調, 熱源設備, 設備応用 (2010) 1439-1440, 2010-07-20, 日本建築学会
+			</button>
+			<button type=“button” onclick="location.href='https://www.aij.or.jp/paper/detail.html?productId=247436'" class="collapsible_descendant">
+				家庭用エアコンの冷房時熱源特性モデルの開発 : 第2報 : 動作特性把握実験(熱源シミュレーション,環境工学II), 学術講演梗概集. D-2, 
+				環境工学II, 熱, 湿気, 温熱感, 自然エネルギー, 気流・換気・排煙, 数値流体, 空気清浄, 暖冷房・空調, 熱源設備, 設備応用 (2010) 1441-1442, 2010-07-20, 日本建築学会
+			</button>
+			<button type=“button” onclick="location.href='https://www.aij.or.jp/paper/detail.html?productId=247437'" class="collapsible_descendant">
+				家庭用エアコンの冷房時熱源特性モデルの開発 : 第3報 : 熱源特性モデルの精度検証(熱源シミュレーション, 環境工学II), 学術講演梗概集. D-2, 
+				環境工学II, 熱, 湿気, 温熱感, 自然エネルギー, 気流・換気・排煙, 数値流体, 空気清浄, 暖冷房・空調, 熱源設備, 設備応用 (2010) 1443-1444, 2010-07-20, 日本建築学会
+			</button>
+		</div>
+		<button class="collapsible_a">ケミカル調湿における除湿剤循環システムの開発</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/nhts/2010/0/2010_0_75/_article/-char/ja/'" class="collapsible_descendant">
+				ケミカル調湿における除湿剤循環システムの開発, 日本伝熱シンポジウム講演論文集 2010 (0), 75-75, 2010, DOI
+			</button>
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/jsmecs/2011.49/0/2011.49_419/_article/-char/ja/'" class="collapsible_descendant">
+				ケミカル調湿における除湿剤循環システムの開発(熱工学I), 中国四国支部総会・講演会　講演論文集 2011.49 (0), 419-420, 2011, DOI
+			</button>
+		</div>
+		<button class="collapsible_a">中空糸透湿膜搭載による湿式デシカント空調機の除湿性能評価</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/scej/2010/0/2010_0_618/_article/-char/ja/'" class="collapsible_descendant">
+				中空糸透湿膜搭載による湿式デシカント空調機の除湿性能評価, 化学工学会　研究発表講演要旨集 2010 (0), 618-618, 2010, DOI
+			</button>
+		</div>
+		<button class="collapsible_a">住宅の断熱性能の違いがエアコン暖房時の室内温熱環境・消費電力に及ぼす影響に関する研究</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/shasetaikai/2011.3/0/2011.3_2049/_article/-char/ja/'" class="collapsible_descendant">
+				住宅の断熱性能の違いがエアコン暖房時の室内温熱環境・消費電力に及ぼす影響に関する研究 : (第2報)温熱環境・消費電力のシミュレーションと精度検証, 
+				空気調和・衛生工学会大会　学術講演論文集 2011.3 (0), 2049-2052, 2011, DOI
+			</button>
+		</div>
+		<button class="collapsible_a">住宅用エアコンの暖房時熱源特性モデルの開発</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/shasetaikai/2011.3/0/2011.3_2073/_article/-char/ja/'" class="collapsible_descendant">
+				住宅用エアコンの暖房時熱源特性モデルの開発,  空気調和・衛生工学会大会　学術講演論文集 2011.3 (0), 2073-2076, 2011, DOI
+			</button>
+		</div>
+		<button class="collapsible_a">家庭用エアコンの熱源特性モデルの開発</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://cir.nii.ac.jp/crid/1571417129458311936'" class="collapsible_descendant">
+				家庭用エアコンの熱源特性モデルの開発(その2)暖房時モデル, 電力中央研究所報告 R 研究報告 (10009) 1-16,巻頭103, 2011-06
+			</button>
+			<button type=“button” onclick="location.href='https://cir.nii.ac.jp/crid/1571135654481612800'" class="collapsible_descendant">
+				家庭用エアコンの熱源特性モデルの開発(その3)デフロストを含む暖房時のモデル化, 電力中央研究所報告. R (11017) 1-17,巻頭1-3, 2012-06
+			</button>
+			<button type=“button” onclick="location.href='https://cir.nii.ac.jp/crid/1573387454295292544'" class="collapsible_descendant">
+				家庭用エアコンの熱源特性モデルの開発(その4)様々な機種へのモデルの適用可能性検証, 電力中央研究所報告. R (12002) 巻頭1-3,1-17, 2012-06
+			</button>
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/shase/38/190/38_KJ00008530728/_article/-char/ja/'" class="collapsible_descendant">
+				家庭用エアコンの熱源特性モデルの開発 : その1:冷房運転時モデル, 空気調和・衛生工学会 論文集 38 (190), 41-49, 2013, DOI
+			</button>
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/shase/39/204/39_KJ00009985596/_article/-char/ja/'" class="collapsible_descendant">
+				家庭用エアコンの熱源特性モデルの開発 : その2:暖冷房運転時モデルへの拡張と汎用性の検証, 空気調和・衛生工学会 論文集 39 (204), 85-92, 2014, DOI
+			</button>
+			<button type=“button” onclick="location.href='https://cir.nii.ac.jp/crid/1570572704528200832'" class="collapsible_descendant">
+				家庭用エアコンの熱源特性モデルの開発(その5)非定常状態への適用, 電力中央研究所報告. R (13016) 巻頭1-3,1-28, 2014-06
+			</button>
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/shase/40/225/40_KJ00010156311/_article/-char/ja/'" class="collapsible_descendant">
+				家庭用エアコンの熱源特性モデルの開発 : 第3報-非定常状態への適用のためのモデル改良, 空気調和・衛生工学会 論文集 40 (225), 29-36, 2015, DOI
+			</button>
+			<button type=“button” onclick="location.href='https://cir.nii.ac.jp/crid/1571417129462500224'" class="collapsible_descendant">
+				家庭用エアコンの熱源特性モデルの開発, 電力中央研究所報告. 総合報告. 電力中央研究所システム技術研究所 編 (9) 巻頭1-4,1-90, 2015-07
+			</button>
+		</div>
+		<button class="collapsible_a">家庭用エアコンの暖房時熱源特性モデルの開発</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://www.aij.or.jp/paper/detail.html?productId=386492'" class="collapsible_descendant">
+				家庭用エアコンの暖房時熱源特性モデルの開発 : 第1報:動作特性把握実験(住宅のヒートポンプ利用,環境工学II), 学術講演梗概集. D-2, 
+				環境工学II, 熱, 湿気, 温熱感, 自然エネルギー, 気流・換気・排煙, 数値流体, 空気清浄, 暖冷房・空調, 熱源設備, 設備応用 (2011) 1211-1212, 2011-07-20, 日本建築学会
+			</button>
+			<button type=“button” onclick="location.href='https://www.aij.or.jp/paper/detail.html?productId=386493'" class="collapsible_descendant">
+				家庭用エアコンの暖房時熱源特性モデルの開発 : 第2報:熱源特性モデルの構築と精度検証(住宅のヒートポンプ利用,環境工学II), 学術講演梗概集. D-2, 
+				環境工学II, 熱, 湿気, 温熱感, 自然エネルギー, 気流・換気・排煙, 数値流体, 空気清浄, 暖冷房・空調, 熱源設備, 設備応用 (2011) 1213-1214, 2011-07-20, 日本建築学会
+			</button>
+			<button type=“button” onclick="location.href='https://www.aij.or.jp/paper/detail.html?productId=386494'" class="collapsible_descendant">
+				家庭用エアコンの暖房時熱源特性モデルの開発 : 第3報:熱源特性モデルを組み込んだ熱負荷シミュレーション(住宅のヒートポンプ利用,環境工学II), 学術講演梗概集. D-2, 
+				環境工学II, 熱, 湿気, 温熱感, 自然エネルギー, 気流・換気・排煙, 数値流体, 空気清浄, 暖冷房・空調, 熱源設備, 設備応用 (2011) 1215-1216, 2011-07-20, 日本建築学会
+			</button>
+			<button type=“button” onclick="location.href='https://www.aij.or.jp/paper/detail.html?productId=400325'" class="collapsible_descendant">
+				家庭用エアコンの暖房時熱源特性モデルの開発 第4報 : デフロストを含む運転条件の実験 
+		        (空調システム(1):住宅用エアコン, 環境工学II, 2012年度大会(東海)学術講演会・建築デザイン発表会), 環境工学II (2012) 949-950, 2012-09-12, 日本建築学会
+			</button>
+			<button type=“button” onclick="location.href='https://www.aij.or.jp/paper/detail.html?productId=400326'" class="collapsible_descendant">
+				家庭用エアコンの暖房時熱源特性モデルの開発 第5報 : デフロストを含むモデルの構築
+				(空調システム(1):住宅用エアコン, 環境工学II, 2012年度大会(東海)学術講演会・建築デザイン発表会), 環境工学II (2012) 951-952, 2012-09-12, 日本建築学会
+			</button>
+			<button type=“button” onclick="location.href='https://www.aij.or.jp/paper/detail.html?productId=407125'" class="collapsible_descendant">
+				家庭用エアコンの暖房時熱源特性モデルの開発 : 第6報:普及機を対象としたモデルの精度検証 
+				(ルームエアコン, 環境工学II, 2013 年度日本建築学会大会(北海道)学術講演会・建築デザイン発表会), 環境工学II (2013) 955-956, 2013-08-30, 日本建築学会
+			</button>
+			<button type=“button” onclick="location.href='https://www.aij.or.jp/paper/detail.html?productId=407126'" class="collapsible_descendant">
+				家庭用エアコンの暖房時熱源特性モデルの開発 : 第7報:様々な機種へのモデルの適用可能性の検証 
+				(ルームエアコン, 環境工学II, 2013 年度日本建築学会大会(北海道)学術講演会・建築デザイン発表会), 環境工学II (2013) 957-958, 2013-08-30, 日本建築学会
+			</button>
+			<button type=“button” onclick="location.href='https://www.aij.or.jp/paper/detail.html?productId=422325'" class="collapsible_descendant">
+				家庭用エアコンの暖房時熱源特性モデルの開発 : 第8報:最大・最小能力算出モデルの構築(住宅冷暖房機器,環境工学II,2014年度日本建築学会大会(近畿)学術講演会・建築デザイン発表会), 
+				環境工学II (2014) 1401-1402, 2014-09-12, 日本建築学会
+			</button>
+			<button type=“button” onclick="location.href='https://www.aij.or.jp/paper/detail.html?productId=422326'" class="collapsible_descendant">
+				家庭用エアコンの暖房時熱源特性モデルの開発 : 第9報:非定常状態における精度検証(住宅冷暖房機器,環境工学II,2014年度日本建築学会大会(近畿)学術講演会・建築デザイン発表会),
+				 環境工学II (2014) 1403-1404, 2014-09-12, 日本建築学会
+			</button>
+			<button type=“button” onclick="location.href='https://cir.nii.ac.jp/crid/1571698602837645056'" class="collapsible_descendant">
+				家庭用エアコンの暖房時熱源特性モデルの開発 : 第10報:R32冷媒利用機種を対象とした検証(空調機器評価,環境工学II,学術講演会・建築デザイン発表会), 
+				環境工学II (2015) 1345-1346, 2015-09-04, 日本建築学会
+			</button>
+			<button type=“button” onclick="location.href='https://www.aij.or.jp/paper/detail.html?productId=381648'" class="collapsible_descendant">
+				家庭用エアコンの暖房時熱源特性モデルの開発　第11報　熱量推定モデルへの拡張, 環境工学II (2016) 1293-1294, 2016-08-24, 日本建築学会
+			</button>
+			<button type=“button” onclick="location.href='https://www.aij.or.jp/paper/detail.html?productId=381649'" class="collapsible_descendant">
+				家庭用エアコンの暖房時熱源特性モデルの開発　第12報　熱量推定モデルの検証, 環境工学II (2016) 1295-1296, 2016-08-24, 日本建築学会
+			</button>
+		</div>
+		<button class="collapsible_a">リサイクル樹脂基材を用いた床材の接触温冷感に関する評価研究</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/jietaikaiyoushi/20/0/20_328/_article/-char/ja/'" class="collapsible_descendant">
+				7-5-1 リサイクル樹脂基材を用いた床材の接触温冷感に関する評価研究(7-5 リサイクル4, Session7 環境対策・リサイクル,研究発表), 
+				日本エネルギー学会大会講演要旨集 20 (0), 328-329, 2011, DOI
+			</button>
+		</div>
+		<button class="collapsible_a">ケミカル調湿用スプレー塔の物質移動特性</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/nhts/2011/0/2011_0_22/_article/-char/ja/'" class="collapsible_descendant">
+				ケミカル調湿用スプレー塔の物質移動特性, 日本伝熱シンポジウム講演論文集 2011 (0), 22-22, 2011, DOI
+			</button>
+		</div>
+		<button class="collapsible_a">スプレー塔の物質移動特性に関する相関式の決定</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/jsmeted/2011/0/2011_359/_article/-char/ja/'" class="collapsible_descendant">
+				スプレー塔の物質移動特性に関する相関式の決定(一般講演(9)), 熱工学コンファレンス講演論文集 2011 (0), 359-360, 2011, DOI
+			</button>
+		</div>
+		<button class="collapsible_a">快適空間をつくる 上手な暖房法 (特集 冷えない衣・食・住)</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://cir.nii.ac.jp/crid/1571980461412474112'" class="collapsible_descendant">
+				快適空間をつくる 上手な暖房法 (特集 冷えない衣・食・住), 婦人之友 106 (2), 48-54, 2012-02
+			</button>
+		</div>
+		<button class="collapsible_a">デフロストを考慮した住宅用エアコンの暖房時熱源特性モデルの開発</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/shasetaikai/2012.2/0/2012.2_1639/_article/-char/ja/'" class="collapsible_descendant">
+				デフロストを考慮した住宅用エアコンの暖房時熱源特性モデルの開発, 空気調和・衛生工学会大会　学術講演論文集 2012.2 (0), 1639-1642, 2012, DOI
+			</button>
+		</div>
+		<button class="collapsible_a">家庭用エアコンの熱源モデルの開発</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://cir.nii.ac.jp/crid/1572543027761908096'" class="collapsible_descendant">
+				家庭用エアコンの熱源モデルの開発 : その1 : 暖房用モデル(シミュレーション技術(2),オーガナイズドセッション1(2)), 
+				空気調和・冷凍に関する連合講演会講演論文集 (46) 111-114, 2012-04-17
+			</button>
+			<button type=“button” onclick="location.href='https://cir.nii.ac.jp/crid/1570291227948213248'" class="collapsible_descendant">
+				家庭用エアコンの熱源モデルの開発 : その2 : 熱源モデルを組み込んだ動的負荷シミュレーション(シミュレーション技術(2),オーガナイズドセッション1(2)), 
+				空気調和・冷凍に関する連合講演会講演論文集 (46) 115-118, 2012-04-17
+			</button>
+		</div>
+		<button class="collapsible_a">住宅用エアコンの熱源特性モデルの汎用性検証</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/shasetaikai/2013.3/0/2013.3_85/_article/-char/ja/'" class="collapsible_descendant">
+				住宅用エアコンの熱源特性モデルの汎用性検証, 空気調和・衛生工学会大会　学術講演論文集 2013.3 (0), 85-88, 2013, DOI
+			</button>
+		</div>
+		<button class="collapsible_a">エアコン室外機の背面間隔における省エネ性評価研究</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/shasetaikai/2014.3/0/2014.3_241/_article/-char/ja/'" class="collapsible_descendant">
+				エアコン室外機の背面間隔における省エネ性評価研究, 空気調和・衛生工学会大会　学術講演論文集 2014.3 (0), 241-244, 2014, DOI
+			</button>
+		</div>
+		<button class="collapsible_a">利用状況に応じた住宅用エアコンの最大・最小能力算出モデルの開発</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/shasetaikai/2014.3/0/2014.3_233/_article/-char/ja/'" class="collapsible_descendant">
+				利用状況に応じた住宅用エアコンの最大・最小能力算出モデルの開発, 空気調和・衛生工学会大会　学術講演論文集 2014.3 (0), 233-236, 2014, DOI
+			</button>
+		</div>
+		<button class="collapsible_a">住宅用エアコンの熱源特性モデルの非定常状態への適用</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/shasetaikai/2014.3/0/2014.3_237/_article/-char/ja/'" class="collapsible_descendant">
+				住宅用エアコンの熱源特性モデルの非定常状態への適用, 空気調和・衛生工学会大会　学術講演論文集 2014.3 (0), 237-240, 2014, DOI
+			</button>
+		</div>
+		<button class="collapsible_a">エアコン暖房時におけるサーキュレーター設置位置の効果に関する評価研究</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/shasetaikai/2015.3/0/2015.3_281/_article/-char/ja/'" class="collapsible_descendant">
+				エアコン暖房時におけるサーキュレーター設置位置の効果に関する評価研究, 空気調和・衛生工学会大会　学術講演論文集 2015.3 (0), 281-284, 2015, DOI
+			</button>
+		</div>
+		<button class="collapsible_a">等級の異なる試験住宅における冷房間欠運転時のルームエアコンの運転挙動に関する試験</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/shasetaikai/2015.3/0/2015.3_277/_article/-char/ja/'" class="collapsible_descendant">
+				等級の異なる試験住宅における冷房間欠運転時のルームエアコンの運転挙動に関する試験, 空気調和・衛生工学会大会　学術講演論文集 2015.3 (0), 277-280, 2015, DOI
+			</button>
+		</div>
+		<button class="collapsible_a">家庭用エアコン空調時の気流環境と消費電力の同時計算ツールの開発</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/shasetaikai/2015.5/0/2015.5_129/_article/-char/ja/'" class="collapsible_descendant">
+				家庭用エアコン空調時の気流環境と消費電力の同時計算ツールの開発, 空気調和・衛生工学会大会　学術講演論文集 2015.5 (0), 129-132, 2015, DOI
+			</button>
+		</div>
+		<button class="collapsible_a">住宅用エアコンの熱源特性モデルを用いた熱量推定モデルの開発</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/shasetaikai/2016.3/0/2016.3_249/_article/-char/ja/'" class="collapsible_descendant">
+				住宅用エアコンの熱源特性モデルを用いた熱量推定モデルの開発, 空気調和・衛生工学会大会　学術講演論文集 2016.3 (0), 249-252, 2016, DOI
+			</button>
+		</div>
+		<button class="collapsible_a">九州国立博物館の新たな防虫対策の取り組みについて</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://cir.nii.ac.jp/crid/1570291611834284160'" class="collapsible_descendant">
+				九州国立博物館の新たな防虫対策の取り組みについて, 東風西声 : 九州国立博物館紀要 : the bulletin of Kyushu National Museum (12) 126-117, 2016
+			</button>
+			<button type=“button” onclick="location.href='https://cir.nii.ac.jp/crid/1010000781824432388'" class="collapsible_descendant">
+				九州国立博物館の新たな防虫対策の取り組みについて, 九州国立博物館紀要「東風西声」 12 2017
+			</button>
+		</div>
+		<button class="collapsible_a">等級の異なる試験住宅におけるエアコン暖房運転時のサーキュレータの使用に関する試験</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://www.aij.or.jp/paper/detail.html?productId=607004'" class="collapsible_descendant">
+				等級の異なる試験住宅におけるエアコン暖房運転時のサーキュレータの使用に関する試験, 環境工学II (2017) 1119-1120, 2017-07-20, 日本建築学会
+			</button>
+		</div>
+		<button class="collapsible_a">電気HP式ビル用マルチエアコンの熱源特性モデルの開発</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://cir.nii.ac.jp/crid/1573387454243766272'"  class="collapsible_descendant">
+				電気HP式ビル用マルチエアコンの熱源特性モデルの開発　（第1報）冷房時モデル, 空気調和・衛生工学会大会　学術講演論文集 2018.3 (0), 45-48, 2018, DOI
+			</button>
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/shasetaikai/2018.3/0/2018.3_49/_article/-char/ja/'"  class="collapsible_descendant">
+				電気HP式ビル用マルチエアコンの熱源特性モデルの開発　（第2報）冷房時モデルの精度検証, 空気調和・衛生工学会大会　学術講演論文集 2018.3 (0), 49-52, 2018, DOI
+			</button>
+			<button type=“button” onclick="location.href='https://www.aij.or.jp/paper/detail.html?productId=620939'" class="collapsible_descendant">
+				電気HP式ビル用マルチエアコンの熱源特性モデルの開発　その1 冷房時モデル, 環境工学II (2018) 1377-1378, 2018-07-20, 日本建築学会
+			</button>
+			<button type=“button” onclick="location.href='https://www.aij.or.jp/paper/detail.html?productId=620940'" class="collapsible_descendant">
+				電気HP式ビル用マルチエアコンの熱源特性モデルの開発　その2 冷房時モデルの精度検証, 環境工学II (2018) 1379-1380, 2018-07-20, 日本建築学会
+			</button>
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/shasetaikai/2019.3/0/2019.3_257/_article/-char/ja/'" class="collapsible_descendant">
+				電気HP式ビル用マルチエアコンの熱源特性モデルの開発　（第3報）定常暖房時モデル, 空気調和・衛生工学会大会　学術講演論文集 2019.3 (0), 257-260, 2019, DOI
+			</button>
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/shasetaikai/2019.3/0/2019.3_261/_article/-char/ja/'" class="collapsible_descendant">
+				電気HP式ビル用マルチエアコンの熱源特性モデルの開発　（第4報）暖房時運転特性の把握, 空気調和・衛生工学会大会　学術講演論文集 2019.3 (0), 261-264, 2019, DOI
+			</button>
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/shasetaikai/2019.3/0/2019.3_265/_article/-char/ja/'" class="collapsible_descendant">
+				電気HP式ビル用マルチエアコンの熱源特性モデルの開発　（第5報）暖房時モデルの精度検証, 空気調和・衛生工学会大会　学術講演論文集 2019.3 (0), 265-268, 2019, DOI
+			</button>
+			<button type=“button” onclick="location.href='https://www.aij.or.jp/paper/detail.html?productId=632098'" class="collapsible_descendant">
+				電気HP式ビル用マルチエアコンの熱源特性モデルの開発　その3　暖房時運転特性の把握, 環境工学II (2019) 1313-1314, 2019-07-20, 日本建築学会
+			</button>
+			<button type=“button” onclick="location.href='https://www.aij.or.jp/paper/detail.html?productId=632099'" class="collapsible_descendant">
+				電気HP式ビル用マルチエアコンの熱源特性モデルの開発　その4 定常暖房時モデルの妥当性の検証, 環境工学II (2019) 1315-1316, 2019-07-20, 日本建築学会
+			</button>
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/shase/45/281/45_35/_article/-char/ja/'" class="collapsible_descendant">
+				電気ヒートポンプ式ビル用マルチエアコンの熱源特性モデルの開発, 空気調和・衛生工学会 論文集 45 (281), 35-43, 2020-08-05, DOI
+			</button>
+			<button type=“button” onclick="location.href='https://cir.nii.ac.jp/crid/1573387454243766272'" class="collapsible_descendant">
+				電気ヒートポンプ式ビル用マルチエアコンの熱源特性モデルの開発(第1報)冷房時モデル, 空気調和・衛生工学会論文集 (281) 35-43, 2020-08
+			</button>
+		</div>
+		<button class="collapsible_a">家庭用エアコンの故障・劣化診断のためのエアコン挙動の解析</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://www.aij.or.jp/paper/detail.html?productId=620935'" class="collapsible_descendant">
+				家庭用エアコンの故障・劣化診断のためのエアコン挙動の解析　(その1) 暖房定常運転時における冷媒減少の影響評価, 環境工学II (2018) 1369-1370, 2018-07-20, 日本建築学会
+			</button>
+		</div>
+		<button class="collapsible_a">湿度制御した温風処理における殺虫効果の検証</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://cir.nii.ac.jp/crid/1574231879146822656'" class="collapsible_descendant">
+				湿度制御した温風処理における殺虫効果の検証, 保存科学 (58) 21-28, 2018
+			</button>
+			<button type=“button” onclick="location.href='https://tobunken.repo.nii.ac.jp/?action=pages_view_main&active_action=repository_view_main_item_detail&item_id=9162&item_no=1&page_id=13&block_id=21'" class="collapsible_descendant">
+				〔報文〕湿度制御した温風処理における殺虫効果の検証, 保存科学 = Science for Conservation 58 21-28, 2019-03-22, 機関リポジトリ
+			</button>
+		</div>
+		<button class="collapsible_a">湿度制御温風処理における殺虫効果判定法の開発</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://ndlonline.ndl.go.jp/#!/detail/R300000002-I031510324-00'" class="collapsible_descendant">
+				湿度制御温風処理における殺虫効果判定法の開発, 保存科学 (59) 1-8, 2019
+			</button>
+			<button type=“button” onclick="location.href='https://tobunken.repo.nii.ac.jp/?action=pages_view_main&active_action=repository_view_main_item_detail&item_id=9174&item_no=1&page_id=13&block_id=21'" class="collapsible_descendant">
+				〔報文〕湿度制御温風処理における殺虫効果判定法の開発, 保存科学 = Science for Conservation 59 1-8, 2020-03-31, 機関リポジトリ
+			</button>
+		</div>
+		<button class="collapsible_a">ペレットストーブのすす低減に関する研究</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/jsmecs/2020.58/0/2020.58_07c1/_article/-char/ja/'" class="collapsible_descendant">
+				ペレットストーブのすす低減に関する研究, 中国四国支部総会・講演会　講演論文集 2020.58 (0), 07c1-, 2020, DOI
+			</button>
+		</div>
+		<button class="collapsible_a">多様な暖房環境を模擬可能な温熱快適性試験室の開発</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/shasetaikai/2020.6/0/2020.6_185/_article/-char/ja/'" class="collapsible_descendant">
+				多様な暖房環境を模擬可能な温熱快適性試験室の開発　第１報　試験室の考案, 空気調和・衛生工学会大会　学術講演論文集 2020.6 (0), 185-188, 2020, DOI
+			</button>
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/shasetaikai/2020.6/0/2020.6_189/_article/-char/ja/'" class="collapsible_descendant">
+				多様な暖房環境を模擬可能な温熱快適性試験室の開発　第２報　プロトタイプ構築と空気環境の評価, 空気調和・衛生工学会大会　学術講演論文集 2020.6 (0), 189-192, 2020, DOI
+			</button>
+		</div>
+		<button class="collapsible_a">エアコン暖房時のサーキュレータ併用による温熱環境改善効果の実測評価</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/shasetaikai/2020.6/0/2020.6_193/_article/-char/ja/'" class="collapsible_descendant">
+				エアコン暖房時のサーキュレータ併用による温熱環境改善効果の実測評価, 空気調和・衛生工学会大会　学術講演論文集 2020.6 (0), 193-196, 2020, DOI
+			</button>
+		</div>
+		<button class="collapsible_a">伝統木造建築の殺虫を目的とした加湿温風処理時における温湿度制御条件に関する研究</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://www.aij.or.jp/paper/detail.html?productId=645870'" class="collapsible_descendant">
+				伝統木造建築の殺虫を目的とした加湿温風処理時における温湿度制御条件に関する研究 その１：
+				実験による木材内部の温湿度挙動の把握,日本建築学会近畿支部研究報告集. 環境系 (60) 301-304, 2020-06,日本建築学会
+			</button>
+			<button type=“button” onclick="location.href='https://www.aij.or.jp/paper/detail.html?productId=649422'" class="collapsible_descendant">
+				伝統木造建築の殺虫を目的とした加湿温風処理時における温湿度制御条件に関する研究　実験による木材内部の温湿度挙動の把握, 環境工学I (2020) 977-978, 2020-09, 日本建築学会
+			</button>
+		</div>
+		<button class="collapsible_a">ペレットストーブの排煙除去に及ぼす噴霧流量の影響</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/jiebiomassronbun/16/0/16_35/_article/-char/ja/'" class="collapsible_descendant">
+				ペレットストーブの排煙除去に及ぼす噴霧流量の影響, バイオマス科学会議発表論文集 16 (0), 35-36, 2021-01-13, DOI
+			</button>
+		</div>
+		<button class="collapsible_a">収蔵庫の高湿度問題への取組</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://www.aij.or.jp/paper/detail.html?productId=658911'" class="collapsible_descendant">
+				収蔵庫の高湿度問題への取組　その1　除湿システムの検討, 環境工学I 2021 581-582, 2021-07-20, 日本建築学会
+			</button>
+			<button type=“button” onclick="location.href='https://www.aij.or.jp/paper/detail.html?productId=658912'" class="collapsible_descendant">
+				収蔵庫の高湿度問題への取組　その2　現地設置及び計測, 環境工学I 2021 583-584, 2021-07-20, 日本建築学会
+			</button>
+		</div>
+		<button class="collapsible_a">伝統木材建築の殺虫を目的とした湿度制御温風処理時における温湿度制御条件に関する研究</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://www.aij.or.jp/paper/detail.html?productId=658904'" class="collapsible_descendant">
+				伝統木材建築の殺虫を目的とした湿度制御温風処理時における温湿度制御条件に関する研究　その2：
+				木材の熱物性値の測定と湿度制御温風処理実験の熱水分解析環境工学I 2021 567-568, 2021-07-20, 日本建築学会
+			</button>
+		</div>
+		
+		<button class="collapsible_title">博士課程後期課程在籍時の論文（博士論文含む）</button>
+		<button class="collapsible_a">博士論文等</button>
+		<div class="inner_container">
+			<button type=“button” onclick="location.href='https://cir.nii.ac.jp/crid/1571980074749418240'" class="collapsible_descendant">
+				(No Title), 混相流 3 (2), 145-154, 1989
+			</button>
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/jjmf1987/3/4/3_4_369/_article/-char/ja/'" class="collapsible_descendant">
+				Heat-Transfer Characteristics in Upward Three-Phase Flows of Gas-Liquid-Solid Mixtures, 混相流 3 (4), 369-378, 1989, DOI
+			</button>
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/jjmf1987/3/4/3_4_379/_article/-char/ja/'" class="collapsible_descendant">
+				Hydrodynamic Characteristics of Gas Slugs Upflowing in Gas-Liquid-Solid Three-Phase Upward Flows, 混相流 3 (4), 379-388, 1989, DOI
+			</button>
+			<button type=“button” onclick="location.href='https://www.jstage.jst.go.jp/article/jjmf1987/3/2/3_2_145/_article/-char/ja/'" class="collapsible_descendant">
+				Flow Patterns for Gas-Liquid and Gas-Liquid-Solid Flows in a Vertical Pipe, 混相流 3 (2), 145-154, 1989, DOI
+			</button>
+			<button type=“button” onclick="location.href='https://cir.nii.ac.jp/crid/1110845735066231040'" class="collapsible_descendant">
+				垂直管内気液固三相流の流動および伝熱特性, 東京大学 工学博士 甲第8296号 1989-06-15, 博士論文
+			</button>
+		</div>
+		<script>
+			window.resizeTo(500,100);
+			var collapsible_a_elements = document.getElementsByClassName("collapsible_a");
+			var	collapsible_a_parent_node_kind=0;
+			var i=0;
+			var	collapsible_a_element_number=0;
+			let	title_property=null;
+			let	onclick_collapsible_a_element_kind=null;
+			
+			if(collapsible_a_elements.length>=1){
+				for(i=1;i<=collapsible_a_elements.length;i=i+1){
+					collapsible_a_elements[i-1].addEventListener("click", function(){
+						this.classList.toggle("active_a");
+						if(this.nextElementSibling.style.maxHeight){
+							this.nextElementSibling.style.maxHeight=null;
+						}else {
+							this.nextElementSibling.style.maxHeight=this.nextElementSibling.scrollHeight + "px";
+						}
+					});
+					collapsible_a_elements[i-1].onclick=(function(a){
+						//return function(){console.log(a,",",title_property);};
+					})(i);
+				}
+			}
+			
+		</script>
+
+	</body>
+</html>

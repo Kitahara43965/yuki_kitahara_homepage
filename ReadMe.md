@@ -6,12 +6,13 @@ NTTぷららが提供する個人・法人向けのウェブサイト作成・�
 $cd (ローカルリポジトリ名)<br>
 でローカルリポジトリに移動し、<br>
 $git clone git@github.com:Kitahara43965/yuki_kitahara_homepage.git<br>
-とすればローカルディレクトリにクローンできます。<br><br>
+とすればローカルディレクトリにリモートリポジトリをクローンできます。<br><br>
 ローカルリポジトリ「yuki_kitahara_homepage」に入れば<br>
 index.html（ホーム）<br>
 accomplishments/accomplishments.html（業績）<br>
 background/background.html（経歴）<br>
 がございます。<br>
+
 
 
 

@@ -1,6 +1,6 @@
-本成果はhttp://www17.plala.or.jp/TotalSystemLab/のurlのホームページで公開していたものです。<br>
+本成果はhttp://www17.plala.or.jp/TotalSystemLab/<br>のurlのホームページで公開していたものです。<br>
 NTTぷららが提供する個人・法人向けのウェブサイト作成・公開サービスが2025年3月末をもってサービスが終了いたしました。<br>
-そのため、アドレスplala.or.jpを使用したホームページが2025年4月以降閲覧できなくなったとのことです（https://www.docomo.ne.jp/info/notice/page/240627_01.html）。<br>
+そのため、アドレスplala.or.jpを使用したホームページが2025年4月以降閲覧できなくなったとのことです（<br>https://www.docomo.ne.jp/info/notice/page/240627_01.html<br>）。<br>
 お手数おかけしてしまい誠に申し訳ございません。<br>
 <br>
 $cd (ローカルリポジトリ名)<br>
